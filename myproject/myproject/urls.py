@@ -16,10 +16,11 @@ Including another URLconf
 """
 # urls.py
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from task4 import views
 
 urlpatterns = [
+    path('task5/', include('task5.urls')),
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
     path('shop/', views.shop, name='shop'),
