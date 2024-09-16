@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block pagename %}My Site{% endblock %}</title>
+</head>
+<body>
+    <div id="menu">
+        {% block menu %}
+            <!-- Пункты меню -->
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <!-- Добавьте другие пункты меню по необходимости -->
+            </ul>
+        {% endblock %}
+    </div>
+    <div id="content">
+        {% block content %}
+        <!-- Содержимое страницы -->
+        {% endblock %}
+    </div>
+</body>
+</html>
